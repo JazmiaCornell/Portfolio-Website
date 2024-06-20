@@ -1,0 +1,89 @@
+### CREATE five documents.
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Super Mario 64",
+    "rating": 10,
+    "platform": "Nintendo 64",
+    "releaseDate": "09-29-1996"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "The Last of Us",
+    "rating": 10,
+    "platform": "PlayStation 4",
+    "releaseDate": "07-29-2014"
+}
+
+### CREATE 3
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Uncharted 4: A Thief's End",
+    "rating": 9,
+    "platform": "PlayStation 4",
+    "releaseDate": "05-10-2016"
+}
+
+### CREATE 4
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Red Dead Redemption 2",
+    "rating": 10,
+    "platform": "PlayStation 4",
+    "releaseDate": "10-26-2018"
+}
+
+### CREATE 5
+POST http://localhost:3000/games HTTP/1.1
+content-type: application/json
+
+{
+    "title": "NBA Street",
+    "rating": 10,
+    "platform": "PlayStation 2",
+    "releaseDate": "06-19-2000"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/games HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/games/6652bd051550745dc08a54a5 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/games/6652bd0f1550745dc08a54a9 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "NBA Street",
+    "rating": 10,
+    "platform": "PlayStation 2",
+    "releaseDate": "06-19-2001"
+    
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/games/6652bd0f1550745dc08a54a9 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/games HTTP/1.1
+
